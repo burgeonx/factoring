@@ -96,6 +96,21 @@ a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 
+.vl {
+  border-left: 3px solid $border;
+  margin-left: 50%;
+  height: 100px;
+}
+
+.benefit {
+  font-size: 16px;
+  margin-top: 20px;
+  
+  p {
+   color: dark !important; 
+  }
+}
+
 
 /* BUTTON */
 .btn.btn-submit {
