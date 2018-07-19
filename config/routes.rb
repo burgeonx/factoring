@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'pages#home'
+  root 'contacts#new'
 
   get 'line-of-credit' , to: 'pages#line_of_credit'
 
@@ -29,5 +29,7 @@ Rails.application.routes.draw do
   get 'privacy' , to: 'pages#privacy'
 
   get 'terms' , to: 'pages#terms'
+  
+  resources :contacts, only: [:new, :create]
 
 end

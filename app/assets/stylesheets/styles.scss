@@ -88,6 +88,14 @@ p {
   margin-bottom: 50px;
 }
 
+.form-control {
+  color: $dark
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
 
 /* BUTTON */
 .btn.btn-submit {
@@ -180,7 +188,7 @@ p {
 /* FOOTER */
 .footer {
   width: 100% !important;
-  margin-top: 52px;
+  margin-top: 0px !important;
   border-top: 1px solid $border;
   padding-top: 30px;
   padding-bottom: 25px;
@@ -224,10 +232,18 @@ p {
   padding-bottom: 100px;
 }
 
+.section-background-no-margin {
+  background-color: $background;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 0px !important;
+}
+
 
 /* Input */
-input[type="text"], input[type="email"], input[type="password"], textarea {
+input[type="text"], input[type="email"], input[type="password"],  input[type="select"], textarea {
   width: 100%;
+  font-size: 14px;
   max-width: 100%;
   height: 3.5em;
   border: 3px solid $border;
@@ -284,9 +300,11 @@ label {
 select {
   width: 100%;
   max-width: 100%;
-  height: 3em;
+  height: 3.5em;
+  font-size: 14px;
   border: 3px solid $border;
   padding: 0.5em;
+  padding-left: 10px !important;
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -340,6 +358,7 @@ input[type="checkbox"]:checked:before {
 
 /* PANEL */
 .panel.panel-default {
+  background-color: transparent;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
