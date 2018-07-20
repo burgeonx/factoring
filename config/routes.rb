@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
-  root 'contacts#new'
+  devise_for :users,
+             path: '',
+             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'}
+  
+  root 'pages#home'
 
   get 'line-of-credit' , to: 'pages#line_of_credit'
 

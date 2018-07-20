@@ -373,6 +373,13 @@ input[type="checkbox"]:checked:before {
 
 /* PANEL */
 .panel.panel-default {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: 3px solid $border;
+}
+
+.panel.panel-default.home {
   background-color: transparent;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -416,4 +423,41 @@ input[type="checkbox"]:checked:before {
   color: $dark;
   font-weight: bold;
   text-decoration: none;
+}
+
+
+/* Alert */
+.alert {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.alert {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 0px;
+  list-style: none;
+  border: none;
+}
+
+.alert.devise{
+  margin-bottom: 20px;
+  list-style: none;
+  color: $error;
+}
+
+.alert.alert-info {
+  background-color: $secondary !important;
+  color: $white !important;
+}
+
+.alert.alert-success {
+  background-color: $secondary !important;
+  color: $white !important;
+}
+
+.alert.alert-danger {
+  background-color: $secondary !important;
+  color: $white !important;
 }
