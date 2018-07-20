@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   devise_for :users,
              path: '',
-             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'}
+             path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'},
+             controllers: {registrations: 'registrations'}
   
   root 'pages#home'
 
@@ -35,5 +36,12 @@ Rails.application.routes.draw do
   get 'terms' , to: 'pages#terms'
   
   resources :contacts, only: [:new, :create]
+  
+ resources :users, only: [:index, :show] do
+    member do
+      post '/verify_phone_number' => 'users#verify_phone_number'
+      patch '/update_phone_number' => 'users#update_phone_number'
+    end
+ end
 
 end

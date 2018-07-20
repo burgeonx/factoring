@@ -37,3 +37,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'twilio-ruby', '~> 5.10', '>= 5.10.3'
+gem 'figaro', '~> 1.1', '>= 1.1.1'

@@ -126,6 +126,36 @@ a:hover, a:visited, a:link, a:active {
   -moz-box-shadow: none;
 }
 
+.btn.btn-primary {
+  padding: 10px 25px 10px 25px;
+  margin-top: 8px;
+}
+
+.btn.btn-save {
+  background-color: $white !important;
+  border: 2px solid $primary;
+  color: $primary;
+  padding: 10px 25px 10px 25px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.btn.btn-save:hover {
+  background-color: $primary !important;
+  color: $white;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+    &:hover {
+    transform: scale(1.025);
+  }
+}
+
 
 /* NAVBAR */
 .navbar {
