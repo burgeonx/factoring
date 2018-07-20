@@ -1,11 +1,11 @@
-<div class="container content">
+<div class="container content content-user">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class="container">
           <h3><strong>Edit My Profile</strong></h3>
           
-          <a href="#" class="underline small">My Dashboard</a>
+          <a href="/dashboard" class="underline small">My Dashboard</a>
           
           <br>
            
@@ -84,15 +84,10 @@
                 <p class=" no-bullet">Phone Number Verified<span class="text-primary">&emsp;<i class="far fa-check-circle"></i></span></p>  
               </div>            
             </div>
-          <hr>
-            <% end %> 
-
-            <h4>Cancel my account</h4>
-
-            <p><small><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure you want to cancel your account?" }, method: :delete, class: "btn btn-primary" %></small></p>
-
-            <small><%= link_to "Back", :back %></small>
+            
             <br>
+            
+            <% end %> 
           
           <br>
         

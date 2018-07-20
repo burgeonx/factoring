@@ -1,0 +1,15 @@
+<div class="container content content-user">
+  <div class="row">
+    <div class="col-md-3 user">
+      <center><%= image_tag avatar_url(current_user), class: "img-circle avatar-large" %></center>
+      <br>
+      <center class="small"><%= current_user.name %></center>
+      <% if current_user.phone_number.blank? %>
+        <%= link_to "Add phone number to secure your account", edit_user_registration_path, class:"underline small" %>
+      <% end %>
+    </div> 
+    <div class="col-md-9">
+      <h5>Tell us more about <strong><%= link_to @user.company_name %></strong>!</h5>
+    </div> 
+  </div>
+</div>
