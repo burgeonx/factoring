@@ -5,7 +5,11 @@ Rails.application.routes.draw do
              path_names: {sign_in: 'login', sign_out: 'logout', edit: 'edit', sign_up: 'register'},
              controllers: {registrations: 'registrations'}
   
-  root 'pages#home'
+  authenticated :user do
+    root 'dashboards#index', as: :authenticated_root
+  end
+
+  root "pages#home"
 
   get 'line-of-credit' , to: 'pages#line_of_credit'
 

@@ -55,6 +55,10 @@ body {
   .content {
     min-height: 680px;
   }
+  
+  .content-user {
+    padding-top: 50px;
+  }
 }
 
 .padded {
@@ -490,4 +494,30 @@ input[type="checkbox"]:checked:before {
 .alert.alert-danger {
   background-color: $secondary !important;
   color: $white !important;
+}
+
+
+/* AVATAR */
+.avatar-tiny {
+  width: 20px;
+  border: 1px solid $border;
+}
+
+.avatar-small {
+  width: 35px;
+  border: 2px solid $border;
+  margin-top: -8px;
+}
+
+.avatar-medium {
+  width: 48px;
+}
+
+.avatar-large {
+  width: 68px;
+  border-radius: 5px;
+}
+
+.avatar-full {
+  width: 100%;
 }
