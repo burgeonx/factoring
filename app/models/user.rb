@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   
   validates :name, presence: true, length: {maximum: 50}
+  validates :company_name, presence: true, length: {maximum: 50}
+  validates :company_zip, presence: true, length: {maximum: 5}
   
   def generate_pin
     self.pin = SecureRandom.hex(2)

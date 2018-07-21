@@ -9,8 +9,10 @@
           <tr>
             <th>Name</th>
             <th>Company Name</th>
+            <th>Zip Code</th>
             <th>Amount</th>
             <th>Phone Number</th>
+            <th>Joined</th>
             <th colspan="3"></th>
           </tr>
         </thead>
@@ -19,9 +21,10 @@
             <tr>
               <td><%= link_to user.name, user %></td>
               <td><%= user.company_name %></td>
+              <td><%= user.company_zip %></td>
               <td><%= user.amount %></td>
               <td><%= user.phone_number %></td>
-              <td></td>
+              <td><%= user.created_at.strftime("%b %d, %Y") %></td>
               <td colspan="3"></td>
             </tr>
           <% end %>

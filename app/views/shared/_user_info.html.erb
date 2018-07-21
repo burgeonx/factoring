@@ -1,15 +1,35 @@
 <div class="container content content-user">
   <div class="row">
     <div class="col-md-3 user">
-      <center><%= image_tag avatar_url(current_user), class: "img-circle avatar-large" %></center>
+      <center><%= image_tag avatar_url(current_user), class: "avatar-large" %></center>
       <br>
       <center class="small"><%= current_user.name %></center>
-      <% if current_user.phone_number.blank? %>
-        <%= link_to "Add phone number to secure your account", edit_user_registration_path, class:"underline small" %>
-      <% end %>
+      
     </div> 
     <div class="col-md-9">
-      <h5>Tell us more about <strong><%= link_to @user.company_name %></strong>!</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <% if current_user.phone_number.blank? %>
+            <div class="alert alert-warning alert-dismissible d-none d-lg-block" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <span class="alert-link"></span><%= link_to "Add a phone number to secure your account.", edit_user_registration_path %>
+            </div>
+          <% elsif current_user.phone_verified == false %>
+            <div class="alert alert-warning alert-dismissible d-none d-lg-block" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <span class="alert-link"></span><%= link_to "Verify your phone number.", edit_user_registration_path %>
+            </div>
+          <% else %>
+          <% end %>
+          
+          <br>
+         
+          <div class="alert alert-warning alert-dismissible d-none d-lg-block underline" role="alert">
+            <a href="/">Tell us more about <%= @user.company_name %>.</a>
+          </div>  
+        </div>
+        <div class="col-md-6"></div>
+      </div>
     </div> 
   </div>
 </div>
