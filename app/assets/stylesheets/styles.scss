@@ -123,6 +123,12 @@ td {
   text-decoration: underline;
 }
 
+.padded-underline {
+  border-bottom: solid 3px $secondary;
+  display: inline;
+  padding-bottom: 20px;
+}
+
 
 /* BUTTON */
 .btn.btn-submit {
