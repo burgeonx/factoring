@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180720135904) do
+ActiveRecord::Schema.define(version: 20180721022758) do
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "company_phone"
+    t.string   "trade_name"
+    t.string   "company_address"
+    t.string   "company_suite"
+    t.string   "company_city"
+    t.string   "company_state"
+    t.string   "company_zip"
+    t.string   "tax_id"
+    t.string   "entity_type"
+    t.string   "annual_revenue"
+    t.string   "sell_to"
+    t.string   "financing_time"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["user_id"], name: "index_companies_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

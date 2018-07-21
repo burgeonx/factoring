@@ -529,3 +529,21 @@ input[type="checkbox"]:checked:before {
 .avatar-full {
   width: 100%;
 }
+
+
+/* Forms */
+.select:before {
+  top: 53px;
+  right: 30px;
+  transform: scale(0.94, 0.52);
+}
+
+.form-group input[type="radio"] {
+  height: 10px;
+  margin-top: auto;
+  margin-right: 10px;
+}
+
+.btn-group label {
+  margin-right: 15px;
+}

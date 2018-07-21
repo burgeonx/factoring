@@ -3,5 +3,6 @@ class DashboardsController < ApplicationController
 
   def index
     @user = current_user
+    @companies = current_user.companies
   end
 end

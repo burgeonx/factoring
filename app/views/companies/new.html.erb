@@ -1,0 +1,96 @@
+<div class="container content content-user">
+  <div class="panel panel-default">
+    <div class="panel-heading">Company Info</div>
+    <div class="panel-body">
+      <div class="container">
+       
+        <%= form_for @company do |f| %>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Legal Company Name</label>
+                <%= f.text_field :company_name, :placeholder => "Super Awesome Co.", class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Company Address</label>
+                <%= f.text_field :company_address, :placeholder => "123 Sesame Street", class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Suite</label>
+                <%= f.text_field :company_suite, :placeholder => "(Optional)", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+               
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>City</label>
+                <%= f.text_field :company_city, :placeholder => "Los Angeles", class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>State</label>
+                <%= f.text_field :company_state, :placeholder => "California", class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Zip Code</label>
+                <%= f.text_field :company_zip, :placeholder => "90404", class: "form-control", required: true %>
+            </div>
+          </div>
+        </div>
+               
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Trade Name</label>
+                <%= f.text_field :trade_name, :placeholder => "(Optional)", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Tax ID</label>
+                <%= f.text_field :tax_id, :placeholder => "123456789", class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Annual Revenue</label>
+                <%= f.text_field :annual_revenue, :placeholder => "750,000", class: "form-control", required: true %>
+            </div>
+          </div>
+        </div>
+               
+        <div class="row">
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label>Entity Type</label>
+              <%= f.select :entity_type, [["Sole Proprietorship", "Sole Proprietorship"], ["Partnership", "Partnership"], ["S Corporation", "S Corporation"], ["C Corporation", "C Corporation"], ["Limited Liability Company (LLC)", "Limited Liability Company (LLC)"]], id: "amount", prompt: "Select...", class: "form-control", required: true %>
+
+            </div>
+          </div>
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label>How soon do you need the funds?</label>
+                <%= f.select :financing_time, [["Within 1 week", "Within 1 week"], ["Within 1 month", "Within 1 month"], ["More than a month", "More than a month"]], id: "financing_time", prompt: "Select...", class: "form-control", required: true %>
+            </div>
+          </div>
+        </div>
+                
+        <%= f.submit "Create Your Company", class: "btn btn-primary" %>
+        
+        <br>
+        
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

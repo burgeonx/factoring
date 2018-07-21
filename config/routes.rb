@@ -43,11 +43,13 @@ Rails.application.routes.draw do
   
   resources :contacts, only: [:new, :create]
   
- resources :users, only: [:index, :show] do
+  resources :users, only: [:index, :show] do
     member do
       post '/verify_phone_number' => 'users#verify_phone_number'
       patch '/update_phone_number' => 'users#update_phone_number'
     end
- end
+  end
+  
+  resources :companies
 
 end
