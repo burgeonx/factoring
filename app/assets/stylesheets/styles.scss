@@ -529,7 +529,8 @@ input[type="checkbox"]:checked:before {
 
 .avatar-large {
   width: 68px;
-  border-radius: 5px;
+  border-radius: 50px;
+  border: 3px solid $border;
 }
 
 .avatar-full {
@@ -552,4 +553,13 @@ input[type="checkbox"]:checked:before {
 
 .btn-group label {
   margin-right: 15px;
+}
+
+.side-panel-secondary {
+  background-color: $secondary !important;
+  color: $white;
+  margin-top: -50px;
+  padding-top: 50px;
+  height: 100%;
+  min-height: 730px;
 }
