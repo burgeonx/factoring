@@ -4,7 +4,6 @@ class CompaniesController < ApplicationController
   
   def index
     @companies = Company.all
-    @user = current_user
   end
 
   def new

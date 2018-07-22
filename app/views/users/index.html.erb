@@ -20,7 +20,7 @@
         <tbody>
           <% @users.each do |user| %>
             <tr>
-              <td><%= link_to user.name, user %></td>
+              <td><%= user.name %></td>
               <td><%= user.company_name %></td>
               <td><%= user.company_zip %></td>
               <td><%= user.amount %></td>
